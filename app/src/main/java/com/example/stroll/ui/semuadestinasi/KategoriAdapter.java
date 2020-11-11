@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.ViewHolder> {
-    private List<Kategori> listCourses = new ArrayList<>();
+    private final List<Kategori> listCourses = new ArrayList<>();
 
     void setCourses(List<Kategori> listCourses) {
         if (listCourses == null) return;
@@ -32,7 +32,7 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.ViewHo
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_kategori, parent, false);
         return new ViewHolder(view);
     }
-//dsfdsf
+
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         Kategori course = listCourses.get(position);
@@ -44,7 +44,7 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.ViewHo
         return listCourses.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView tvTitle;
 
         ViewHolder(View itemView) {

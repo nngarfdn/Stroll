@@ -1,5 +1,6 @@
 package com.example.stroll.ui.semuadestinasi;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.stroll.R;
 import com.example.stroll.model.Destinasi;
+import com.example.stroll.ui.detail.DetailActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -60,18 +62,20 @@ public class DestinasiAdapter extends RecyclerView.Adapter<DestinasiAdapter.View
             imgDestinasi = itemView.findViewById(R.id.imgItemWisata);
         }
 
-        void bind(Destinasi course) {
-            tvTitle.setText(course.getNamaDestinasi());
-            tvDeskripsi.setText(course.getDeskripsiDestinasi());
-            tvAlamat.setText(course.getAlamatDestinasi());
+        void bind(Destinasi destinasi) {
+            tvTitle.setText(destinasi.getNamaDestinasi());
+            tvDeskripsi.setText(destinasi.getDeskripsiDestinasi());
+            tvAlamat.setText(destinasi.getAlamatDestinasi());
 
             Picasso.get()
-                    .load(course.getPhotoDestinasi())
+                    .load(destinasi.getPhotoDestinasi())
                     .resize(100, 100)
                     .centerCrop()// resizes the image to these dimensions (in pixel)
                     .into(imgDestinasi);
             itemView.setOnClickListener(v -> {
-
+                Intent intent = new Intent(itemView.getContext(), DetailActivity.class);
+                intent.putExtra(DetailActivity.EXTRA_DESTINASI, destinasi);
+                itemView.getContext().startActivity(intent);
             });
         }
     }

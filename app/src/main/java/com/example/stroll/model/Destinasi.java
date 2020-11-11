@@ -1,6 +1,9 @@
 package com.example.stroll.model;
 
-public class Destinasi {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Destinasi implements Parcelable {
 
     private int id;
     private String namaDestinasi;
@@ -18,6 +21,40 @@ public class Destinasi {
         this.alamatDestinasi = alamatDestinasi;
         this.photoDestinasi = photoDestinasi;
     }
+
+    protected Destinasi(Parcel in) {
+        id = in.readInt();
+        namaDestinasi = in.readString();
+        deskripsiDestinasi = in.readString();
+        alamatDestinasi = in.readString();
+        photoDestinasi = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(namaDestinasi);
+        dest.writeString(deskripsiDestinasi);
+        dest.writeString(alamatDestinasi);
+        dest.writeString(photoDestinasi);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Destinasi> CREATOR = new Creator<Destinasi>() {
+        @Override
+        public Destinasi createFromParcel(Parcel in) {
+            return new Destinasi(in);
+        }
+
+        @Override
+        public Destinasi[] newArray(int size) {
+            return new Destinasi[size];
+        }
+    };
 
     public int getId() {
         return id;
