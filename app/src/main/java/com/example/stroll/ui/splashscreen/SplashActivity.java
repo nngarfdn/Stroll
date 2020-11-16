@@ -7,7 +7,7 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.stroll.R;
-import com.example.stroll.ui.home.HomeActivity;
+import com.example.stroll.ui.welcome.WelcomeActivity;
 
 public class SplashActivity extends AppCompatActivity {
     private int waktu_loading=4000;
@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
 
                 //setelah loading maka akan langsung berpindah ke home activity
-                Intent home=new Intent(SplashActivity.this, HomeActivity.class);
+                Intent home=new Intent(SplashActivity.this, WelcomeActivity.class);
                 startActivity(home);
                 finish();
 
