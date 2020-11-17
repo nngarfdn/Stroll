@@ -13,7 +13,7 @@ import com.example.stroll.R;
 public class SaranFragment extends Fragment {
 
     public SaranFragment() {
-        // Required empty public constructor
+
     }
 
     @Override
@@ -24,8 +24,6 @@ public class SaranFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
 
         return inflater.inflate(R.layout.fragment_saran, container, false);
     }
