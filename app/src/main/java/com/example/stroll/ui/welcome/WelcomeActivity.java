@@ -7,7 +7,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.stroll.R;
-import com.example.stroll.ui.home.HomeActivity;
+import com.example.stroll.ui.kuis.KuisSatuActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
     private Button btnMulai;
@@ -18,7 +18,7 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
         btnMulai=findViewById(R.id.btn_mulai);
         btnMulai.setOnClickListener(v -> {
-            Intent intent=new Intent(WelcomeActivity.this, HomeActivity.class);
+            Intent intent=new Intent(WelcomeActivity.this, KuisSatuActivity.class);
             startActivity(intent);
         });
 
