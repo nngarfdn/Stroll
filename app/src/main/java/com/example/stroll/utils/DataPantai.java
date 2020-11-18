@@ -7,10 +7,10 @@ import java.util.ArrayList;
 public class DataPantai {
 
     private static int[] id = {
-            11,
-            12,
-            13,
-            14
+            01,
+            02,
+            03,
+            04
     };
 
     private static String[] photoPantai = {
