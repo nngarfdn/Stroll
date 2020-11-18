@@ -1,5 +1,6 @@
 package com.example.stroll.ui.semuadestinasi;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,13 +16,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.example.stroll.R;
 import com.example.stroll.model.Destinasi;
+import com.example.stroll.ui.FavoriteActivity;
 import com.example.stroll.utils.DataPantai;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class KategoriFragment extends Fragment {
 
     RecyclerView rvSemuaDestinasi;
+
     private ArrayList<Destinasi> list = new ArrayList<>();
     public KategoriFragment() {
         // Required empty public constructor
@@ -53,11 +57,9 @@ public class KategoriFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         Bundle mBundle = getArguments();
         final String nameDet = mBundle.getString("name");
-        TextView tvTest ;
-        tvTest = view.findViewById(R.id.txtTest);
+
         rvSemuaDestinasi = view.findViewById(R.id.rvSemuaDestinasi);
 
-        tvTest.setText(nameDet);
 
         if (nameDet.equals("Pantai")) {
             showRecyclerList();

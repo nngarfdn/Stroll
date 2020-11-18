@@ -7,7 +7,8 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import static android.provider.BaseColumns._ID;
+
+import static com.example.stroll.database.DatabaseContract.DestinasiColumns.ID;
 import static com.example.stroll.database.DatabaseContract.TABLE_NAME;
 
 public class DestinasiHelper {
@@ -49,14 +50,14 @@ public class DestinasiHelper {
                 null,
                 null,
                 null,
-                _ID + " ASC");
+                ID + " ASC");
     }
 
     public Cursor queryById(String id) {
         return database.query(
                 DATABASE_TABLE,
                 null,
-                _ID + " = ?",
+                ID + " = ?",
                 new String[]{id},
                 null,
                 null,
@@ -69,11 +70,11 @@ public class DestinasiHelper {
     }
 
     public int update(String id, ContentValues values) {
-        return database.update(DATABASE_TABLE, values, _ID + " = ?", new String[]{id});
+        return database.update(DATABASE_TABLE, values, ID + " = ?", new String[]{id});
     }
 
     public int deleteById(String id) {
-        return database.delete(DATABASE_TABLE, _ID + " = ?", new String[]{id});
+        return database.delete(DATABASE_TABLE, ID + " = ?", new String[]{id});
     }
 
 }

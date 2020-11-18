@@ -12,13 +12,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static String DATABASE_NAME = "dbdestinasiapp";
     private static final int DATABASE_VERSION = 1;
     private static final String SQL_CREATE_TABLE_NOTE = String.format("CREATE TABLE %s"
-                    + " (%s INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    + " (%s INTEGER PRIMARY KEY," +
                     " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL)",
             DatabaseContract.TABLE_NAME,
-            DatabaseContract.DestinasiColumns._ID,
+            DatabaseContract.DestinasiColumns.ID,
             DatabaseContract.DestinasiColumns.TITLE,
             DatabaseContract.DestinasiColumns.DESCRIPTION,
             DatabaseContract.DestinasiColumns.ADDRESS,

@@ -24,7 +24,7 @@ import java.util.List;
 public class DestinasiAdapter extends RecyclerView.Adapter<DestinasiAdapter.ViewHolder> {
     private List<Destinasi> listCourses = new ArrayList<>();
 
-    void setCourses(List<Destinasi> listCourses) {
+    public void setCourses(List<Destinasi> listCourses) {
         if (listCourses == null) return;
         this.listCourses.clear();
         this.listCourses.addAll(listCourses);

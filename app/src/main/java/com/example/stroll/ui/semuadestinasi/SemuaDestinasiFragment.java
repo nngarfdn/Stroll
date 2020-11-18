@@ -1,5 +1,6 @@
 package com.example.stroll.ui.semuadestinasi;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,7 +16,9 @@ import android.view.ViewGroup;
 
 import com.example.stroll.R;
 import com.example.stroll.model.Kategori;
+import com.example.stroll.ui.FavoriteActivity;
 import com.example.stroll.utils.DataKategori;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -23,6 +26,7 @@ import java.util.ArrayList;
 public class SemuaDestinasiFragment extends Fragment {
 
     RecyclerView rvKategori;
+    FloatingActionButton fab;
     private ArrayList<Kategori> list = new ArrayList<>();
 
     public SemuaDestinasiFragment() {
@@ -45,6 +49,13 @@ public class SemuaDestinasiFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        fab = view.findViewById(R.id.floatingActionButton);
+
+        fab.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), FavoriteActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override
