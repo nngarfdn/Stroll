@@ -17,7 +17,7 @@ public class DataPantai {
             "https://cdn.rentalmobilbali.net/wp-content/uploads/2011/12/Pantai-Pasir-Putih-Di-Bali-1-692x376.jpg",
             "https://asset.kompas.com/crops/ktWS7GA9Ah0iGVq26DEgWIiZwBQ=/158x105:1418x945/750x500/data/photo/2019/09/08/5d75120e0290f.jpeg",
             "https://images.solopos.com/2019/12/pantai-kali-kencana-1200x675.jpg",
-           "https://www.itrip.id/wp-content/uploads/2020/04/Wisata-Pantai-Pangandaran.jpg"
+            "https://www.itrip.id/wp-content/uploads/2020/04/Wisata-Pantai-Pangandaran.jpg"
     };
 
     private static String[] namaPantai = {
