@@ -1,4 +1,4 @@
-package com.example.stroll.ui;
+package com.example.stroll.ui.favorite;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;

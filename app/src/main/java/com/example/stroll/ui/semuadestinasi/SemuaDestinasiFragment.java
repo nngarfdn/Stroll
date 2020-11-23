@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 
 import com.example.stroll.R;
 import com.example.stroll.model.Kategori;
-import com.example.stroll.ui.FavoriteActivity;
+import com.example.stroll.ui.favorite.FavoriteActivity;
 import com.example.stroll.utils.DataKategori;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
