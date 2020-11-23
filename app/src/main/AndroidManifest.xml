@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.kuis.KuisDestinasiActivity"></activity>
-        <activity android:name=".ui.kuis.KuisTigaActivity" />
-        <activity android:name=".ui.kuis.KuisDuaActivity" />
-        <activity android:name=".ui.kuis.KuisSatuActivity" />
         <activity android:name=".ui.favorite.FavoriteActivity" />
         <activity android:name=".ui.welcome.WelcomeActivity" />
         <activity android:name=".ui.home.HomeActivity" />

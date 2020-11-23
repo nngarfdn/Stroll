@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.stroll.R;
 import com.example.stroll.ui.kuis.KuisDestinasiActivity;
-import com.example.stroll.ui.kuis.KuisSatuActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
     private Button btnMulai;
