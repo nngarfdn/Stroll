@@ -36,6 +36,7 @@ public class KuisDestinasiActivity extends AppCompatActivity {
         mButtonChoice2 = findViewById(R.id.choice2);
         mButtonChoice3 = findViewById(R.id.choice3);
 
+        pilihan.clear();
         updateQuestion();
 
         mButtonChoice1.setOnClickListener(view -> {
@@ -82,6 +83,10 @@ public class KuisDestinasiActivity extends AppCompatActivity {
         mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumber));
         mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
         if (mQuestionNumber < SoalDestinasi.mQuestions.length) mQuestionNumber++;
+    }
 
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Selesaikan dulu :)", Toast.LENGTH_SHORT).show();
     }
 }
