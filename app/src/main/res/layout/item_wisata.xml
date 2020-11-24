@@ -43,6 +43,8 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/mont_regular"
             android:maxLines="2"
+            android:maxWidth="200dp"
+            android:layout_marginEnd="4dp"
             android:text="Deskripsi destinasi"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/txtNamaDestinasiItem"

@@ -31,7 +31,6 @@ import java.util.Collection;
 public class SaranFragment extends Fragment {
 
     public SaranFragment() {
-
     }
 
     @Override
@@ -81,9 +80,10 @@ public class SaranFragment extends Fragment {
         Collections.shuffle(list);
 
         Log.d("SaranFragment", "Data pilihan: " + pilihan);
-
         for (int i = 0; i < list.size(); i++) {
-            Log.d("SaranFragment", "Data saran : " + list.get(i).getId() + ":" + list.get(i).getNamaDestinasi());
+            Log.d("SaranFragment", "Data saran : " +
+                    list.get(i).getId() + ":" +
+                    list.get(i).getNamaDestinasi());
         }
 
         return inflater.inflate(R.layout.fragment_saran, container, false);
@@ -92,7 +92,5 @@ public class SaranFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
     }
 }

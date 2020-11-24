@@ -6,21 +6,84 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.semuadestinasi.SemuaDestinasiFragment">
 
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipgroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:checkedChip="@+id/chip_program"
+        app:chipSpacingHorizontal="8dp"
+        app:chipSpacingVertical="8dp"
+
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cpantai"
+            app:chipBackgroundColor="@drawable/bg_chip_state_list"
+            android:text="Pantai"
+            style="@style/Chip" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cbioskop"
+            style="@style/Chip"
+            app:chipBackgroundColor="@drawable/bg_chip_state_list"
+            android:text="Bioskop" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/ccandi"
+            style="@style/Chip"
+            app:chipBackgroundColor="@drawable/bg_chip_state_list"
+            android:text="Candi" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cInternetCafe"
+            style="@style/Chip"
+            app:chipBackgroundColor="@drawable/bg_chip_state_list"
+            android:text="Internet Cafe" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/ckolamrenang"
+            style="@style/Chip"
+            app:chipBackgroundColor="@drawable/bg_chip_state_list"
+            android:text="Bioskop" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cmall"
+            style="@style/Chip"
+            app:chipBackgroundColor="@drawable/bg_chip_state_list"
+            android:text="Mall" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cmuseum"
+            style="@style/Chip"
+            app:chipBackgroundColor="@drawable/bg_chip_state_list"
+            android:text="Museum" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cpublicplaces"
+            style="@style/Chip"
+            app:chipBackgroundColor="@drawable/bg_chip_state_list"
+            android:text="Public Places" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/crestoran"
+            style="@style/Chip"
+            app:chipBackgroundColor="@drawable/bg_chip_state_list"
+            android:text="Restoran" />
+
+    </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvKategori"
+        android:id="@+id/rvSemuaDestinasi"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="530dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_kategori" />
-
-    <FrameLayout
-        android:id="@+id/fl_container"
-        android:layout_width="match_parent"
-        android:layout_height="800dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:layout_constraintTop_toBottomOf="@+id/rvKategori" />
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -30,10 +93,9 @@
         android:layout_marginBottom="32dp"
         android:clickable="true"
         android:tint="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
         android:src="@drawable/ic_baseline_favorite_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

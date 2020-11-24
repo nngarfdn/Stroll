@@ -62,8 +62,8 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.ViewHo
                 semuaDestinasiFragment.setArguments(mBundle);
 
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fl_container, semuaDestinasiFragment)
-                        .addToBackStack(null).commit();
+//                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fl_container, semuaDestinasiFragment)
+//                        .addToBackStack(null).commit();
             });
         }
     }
