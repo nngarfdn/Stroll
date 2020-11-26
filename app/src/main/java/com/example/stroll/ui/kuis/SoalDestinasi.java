@@ -4,18 +4,18 @@ package com.example.stroll.ui.kuis;
 public class SoalDestinasi {
 
     public static String mQuestions [] = {
-            "Pertanyaan 1",
-            "Pertanyaan 2",
-            "Pertanyaan 3"
+            "Dimana tempat main yang asik bareng temen?",
+            "Dimana wisata edukasi kesukaanmu?",
+            "Dimana tempat indoor yang kamu banget?"
 
 
     };
 
 
     private String mChoices [][] = {
-            {"Pantai", "Museum", "Candi"},
-            {"Internet Cafe","Restoran","Kolam Renang"},
-            {"Mall", "Bioskop", "Publik Places"}
+            {"Pantai", "Kolam Renang", "Restoran"},
+            {"Publik Places","Candi","Museum "},
+            {"Mall", "Bioskop", "Internet Cafe"}
 
     };
 
