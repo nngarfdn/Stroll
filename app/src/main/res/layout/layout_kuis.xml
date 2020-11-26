@@ -26,9 +26,7 @@
         android:layout_height="54dp"
         android:src="@drawable/smil1"
         android:layout_marginHorizontal="185dp"
-        android:layout_marginTop="-120dp"/>
-
-
+        android:layout_marginTop="-145dp"/>
 
     <TextView
         android:id="@+id/question"
@@ -36,23 +34,25 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="-5dp"
         android:layout_marginBottom="40dp"
         android:gravity="center"
         android:padding="8dp"
         android:text="Dimana tempat main yang asik bareng temen ?"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pantai"
+        android:layout_marginTop="50dp"
         android:background="@drawable/custom_button"
         android:textColor="#3CAEA3"
         android:padding="8dp"
         android:textStyle="bold"
+        android:textSize="20dp"
         android:layout_marginHorizontal="32dp"
         android:layout_marginBottom="24dp"
         android:id="@+id/choice1" />
@@ -64,6 +64,7 @@
         android:background="@drawable/custom_button"
         android:textColor="#3CAEA3"
         android:padding="8dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:layout_marginHorizontal="32dp"
         android:layout_marginBottom="24dp"
@@ -77,6 +78,7 @@
         android:textColor="#3CAEA3"
         android:padding="8dp"
         android:textStyle="bold"
+        android:textSize="20dp"
         android:layout_marginHorizontal="32dp"
         android:layout_marginBottom="24dp"
         android:id="@+id/choice3" />
