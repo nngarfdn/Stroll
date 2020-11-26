@@ -17,7 +17,17 @@
             android:layout_height="170dp"
             android:src="@drawable/mask"
             android:layout_marginTop="-16dp"/>
+
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:src="@drawable/smil1"
+        android:layout_marginHorizontal="185dp"
+        android:layout_marginTop="-120dp"/>
+
 
 
     <TextView
