@@ -37,54 +37,75 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class SaranFragment extends Fragment {
-    FloatingActionButton fab;
+
     RecyclerView rvSemuaDestinasi;
-    private ArrayList<Destinasi> list = new ArrayList<>();
 
     public SaranFragment() {
-        // Required empty public constructor
-    }
-
-    public static SemuaDestinasiFragment newInstance(String param1, String param2) {
-        SemuaDestinasiFragment fragment = new SemuaDestinasiFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        rvSemuaDestinasi = view.findViewById(R.id.rvSemuaDestinasi);
-        list.clear();
-        list.addAll(DataPantai.getListDataPantai());
-        showRecyclerList();
-
-        fab = view.findViewById(R.id.floatingActionButton);
-        fab.setOnClickListener(v -> {
-            Intent intent = new Intent(getContext(), FavoriteActivity.class);
-            startActivity(intent);
-        });
-
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view=  inflater.inflate(R.layout.fragment_saran, container, false);
-        return view;
 
+
+
+        return inflater.inflate(R.layout.fragment_saran, container, false);
     }
 
-    private void showRecyclerList() {
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        ArrayList<String> pilihan = HomeActivity.pilihan;
+        ArrayList<Destinasi> list = new ArrayList<>();
+        rvSemuaDestinasi = view.findViewById(R.id.rvSemuaDestinasi);
+
+        if (pilihan != null) {
+            for (int i = 0; i < pilihan.size(); i++) {
+                if (pilihan.get(i).equals("Pantai")) {
+                    list.addAll(DataPantai.getListDataPantai());
+                }
+                if (pilihan.get(i).equals("Museum")) {
+                    list.addAll(DataMuseum.getListDataMuseum());
+                }
+                if (pilihan.get(i).equals("Candi")) {
+                    list.addAll(DataCandi.getListDataCandi());
+                }
+                if (pilihan.get(i).equals("Internet Cafe")) {
+                    list.addAll(DataInternetCafe.getListDataInternetCafe());
+                }
+                if (pilihan.get(i).equals("Restoran")) {
+                    list.addAll(DataRestoran.getListDataRestoran());
+                }
+                if (pilihan.get(i).equals("Kolam Renang")) {
+                    list.addAll(DataKolamRenang.getListDataKolamRenang());
+                }
+                if (pilihan.get(i).equals("Mall")) {
+                    list.addAll(DataMall.getListDataMall());
+                }
+                if (pilihan.get(i).equals("Bioskop")) {
+                    list.addAll(DataBioskop.getListDataBioskop());
+                }
+                if (pilihan.get(i).equals("Publik Places")) {
+                    list.addAll(DataPublicPlaces.getListDataPublicPlaces());
+                }
+            }
+        }
+
+        Collections.shuffle(list);
+
+        Log.d("SaranFragment", "Data pilihan: " + pilihan);
+        for (int i = 0; i < list.size(); i++) {
+            Log.d("SaranFragment", "Data saran : " +
+                    list.get(i).getId() + ":" +
+                    list.get(i).getNamaDestinasi());
+        }
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         rvSemuaDestinasi.setNestedScrollingEnabled(true);
         rvSemuaDestinasi.setLayoutManager(layoutManager);
@@ -92,8 +113,13 @@ public class SaranFragment extends Fragment {
         listPlayerAdapter.setCourses(list);
         rvSemuaDestinasi.setAdapter(listPlayerAdapter);
     }
+    private void showRecyclerList() {
 
-
-
-
+    }
 }
+
+
+
+
+
+
