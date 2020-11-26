@@ -4,7 +4,7 @@ package com.example.stroll.ui.kuis;
 public class SoalDestinasi {
 
     public static String mQuestions [] = {
-            "Dimana tempat main yang asik bareng temen ?",
+            "Dimana tempat main yang asik bareng temen?",
             "Dimana wisata edukasi kesukaanmu?",
             "Dimana tempat indoor yang kamu banget?"
 
