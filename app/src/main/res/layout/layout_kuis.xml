@@ -24,12 +24,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:layout_marginHorizontal="32dp"
-        android:text="Which thing is alive?"
+        android:text="Dimana tempat main yang asik bareng temen ?"
         android:textSize="30sp"
         android:padding="8dp"
         android:gravity="center"
         android:layout_gravity="center"
         android:textAlignment="center"
+        android:textStyle="bold"
         android:layout_marginBottom="40dp"
         android:id="@+id/question" />
 
@@ -37,10 +38,11 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="bird"
+        android:text="Pantai"
         android:background="@drawable/custom_button"
         android:textColor="#3CAEA3"
         android:padding="8dp"
+        android:textStyle="bold"
         android:layout_marginHorizontal="32dp"
         android:layout_marginBottom="24dp"
         android:id="@+id/choice1" />
@@ -48,10 +50,11 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="door"
+        android:text="Kolam Renang"
         android:background="@drawable/custom_button"
         android:textColor="#3CAEA3"
         android:padding="8dp"
+        android:textStyle="bold"
         android:layout_marginHorizontal="32dp"
         android:layout_marginBottom="24dp"
         android:id="@+id/choice2" />
@@ -59,10 +62,11 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="rock"
+        android:text="Restoran"
         android:background="@drawable/custom_button"
         android:textColor="#3CAEA3"
         android:padding="8dp"
+        android:textStyle="bold"
         android:layout_marginHorizontal="32dp"
         android:layout_marginBottom="24dp"
         android:id="@+id/choice3" />
