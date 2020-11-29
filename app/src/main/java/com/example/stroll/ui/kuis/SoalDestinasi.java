@@ -7,8 +7,6 @@ public class SoalDestinasi {
             "Dimana tempat main yang asik bareng temen?",
             "Dimana wisata edukasi kesukaanmu?",
             "Dimana tempat indoor yang kamu banget?"
-
-
     };
 
 

@@ -117,9 +117,3 @@ public class SaranFragment extends Fragment {
 
     }
 }
-
-
-
-
-
-

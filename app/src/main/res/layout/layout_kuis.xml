@@ -38,6 +38,7 @@
         android:layout_marginTop="-5dp"
         android:layout_marginBottom="40dp"
         android:gravity="center"
+        android:textColor="@android:color/white"
         android:padding="8dp"
         android:text="Dimana tempat main yang asik bareng temen ?"
         android:textAlignment="center"

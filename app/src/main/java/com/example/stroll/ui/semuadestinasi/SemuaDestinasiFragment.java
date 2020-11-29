@@ -137,7 +137,6 @@ public class SemuaDestinasiFragment extends Fragment {
             showRecyclerList();
         });
 
-
         rvSemuaDestinasi = view.findViewById(R.id.rvSemuaDestinasi);
         list.clear();
         list.addAll(DataPantai.getListDataPantai());
