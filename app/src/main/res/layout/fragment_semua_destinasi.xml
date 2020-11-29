@@ -51,7 +51,7 @@
             android:id="@+id/ckolamrenang"
             style="@style/Chip"
             app:chipBackgroundColor="@drawable/bg_chip_state_list"
-            android:text="Bioskop" />
+            android:text="Kolam Renang" />
         <com.google.android.material.chip.Chip
             android:id="@+id/cmall"
             style="@style/Chip"
