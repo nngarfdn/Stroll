@@ -86,9 +86,9 @@ public class KuisDestinasiActivity extends AppCompatActivity {
     private void updateQuestion() {
         mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
 
-        Glide.with(this)
+        Glide.with(this).asBitmap()
                 .load(mQuestionLibrary.getImage(mQuestionNumber))
-                .apply(new RequestOptions().override(280, 130))
+                .override(300, 150)
                 .into(imgIlustrasiKuis);
 
         mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
