@@ -5,12 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.stroll.R;
 import com.example.stroll.ui.home.HomeActivity;
 import com.example.stroll.ui.saran.SaranFragment;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -22,6 +26,7 @@ public class KuisDestinasiActivity extends AppCompatActivity {
     private Button mButtonChoice1;
     private Button mButtonChoice2;
     private Button mButtonChoice3;
+    private ImageView imgIlustrasiKuis;
 
     private int mQuestionNumber = 0;
     private ArrayList<String> pilihan = new ArrayList<>();
@@ -35,6 +40,7 @@ public class KuisDestinasiActivity extends AppCompatActivity {
         mButtonChoice1 = findViewById(R.id.choice1);
         mButtonChoice2 = findViewById(R.id.choice2);
         mButtonChoice3 = findViewById(R.id.choice3);
+        imgIlustrasiKuis = findViewById(R.id.imgIlustrasiKuis);
 
         pilihan.clear();
         updateQuestion();
@@ -79,6 +85,12 @@ public class KuisDestinasiActivity extends AppCompatActivity {
 
     private void updateQuestion() {
         mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
+
+        Glide.with(this)
+                .load(mQuestionLibrary.getImage(mQuestionNumber))
+                .apply(new RequestOptions().override(300, 150))
+                .into(imgIlustrasiKuis);
+
         mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
         mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumber));
         mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));

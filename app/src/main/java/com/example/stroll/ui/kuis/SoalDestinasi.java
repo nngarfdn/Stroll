@@ -1,7 +1,15 @@
 package com.example.stroll.ui.kuis;
 
 
+import com.example.stroll.R;
+
 public class SoalDestinasi {
+
+    public static int mImage[] = {
+            R.drawable.quizi,
+            R.drawable.quizii,
+            R.drawable.quiziii
+    };
 
     public static String mQuestions [] = {
             "Dimana tempat main yang asik bareng temen?",
@@ -14,11 +22,16 @@ public class SoalDestinasi {
             {"Pantai", "Kolam Renang", "Restoran"},
             {"Publik Places","Candi","Museum "},
             {"Mall", "Bioskop", "Internet Cafe"}
-
     };
 
 
     private String mCorrectAnswers[] = {"16 masehi", "Leaves", "Flower"};
+
+
+    public int getImage(int a) {
+        int question = mImage[a];
+        return question;
+    }
 
 
     public String getQuestion(int a) {
@@ -46,5 +59,4 @@ public class SoalDestinasi {
         String answer = mCorrectAnswers[a];
         return answer;
     }
-
 }
