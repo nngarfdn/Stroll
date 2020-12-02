@@ -39,6 +39,7 @@ import java.util.Collection;
 public class SaranFragment extends Fragment {
 
     RecyclerView rvSemuaDestinasi;
+    FloatingActionButton floatingActionButton;
 
     public SaranFragment() {
     }
@@ -64,7 +65,12 @@ public class SaranFragment extends Fragment {
         ArrayList<String> pilihan = HomeActivity.pilihan;
         ArrayList<Destinasi> list = new ArrayList<>();
         rvSemuaDestinasi = view.findViewById(R.id.rvSemuaDestinasi);
+        floatingActionButton = view.findViewById(R.id.floatingActionButton);
 
+        floatingActionButton.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), FavoriteActivity.class);
+            startActivity(intent);
+        });
         if (pilihan != null) {
             for (int i = 0; i < pilihan.size(); i++) {
                 if (pilihan.get(i).equals("Pantai")) {

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +12,7 @@
 
     <ImageView
         android:id="@+id/imgDetailDestinasi"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/pi"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,14 +47,14 @@
 
     <TextView
         android:id="@+id/txtDeskripsiDestinasiDetail"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/mont_regular"
         android:text="Deskripsi beneran"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        android:paddingEnd="24dp"
+        android:layout_marginHorizontal="24dp"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -65,7 +68,9 @@
         android:text="Deskripsi Alamat"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        android:paddingEnd="24dp"
+        android:textStyle="italic"
+        android:maxWidth="200dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/txtDeskripsiDestinasiDetail" />
 
@@ -91,3 +96,5 @@
         app:layout_constraintTop_toBottomOf="@+id/txtDeskripsiDestinasiDetail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
