@@ -20,7 +20,7 @@ public class SoalDestinasi {
 
     private final String[][] mChoices = {
             {"Pantai", "Kolam Renang", "Restoran"},
-            {"Publik Places","Candi","Museum "},
+            {"Publik Places","Candi","Museum"},
             {"Mall", "Bioskop", "Internet Cafe"}
     };
 

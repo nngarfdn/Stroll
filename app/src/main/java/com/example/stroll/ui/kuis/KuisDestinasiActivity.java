@@ -1,15 +1,20 @@
 package com.example.stroll.ui.kuis;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.stroll.R;
 import com.example.stroll.ui.home.HomeActivity;
+import com.example.stroll.ui.saran.SaranFragment;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -24,7 +29,7 @@ public class KuisDestinasiActivity extends AppCompatActivity {
     private ImageView imgIlustrasiKuis;
 
     private int mQuestionNumber = 0;
-    private final ArrayList<String> pilihan = new ArrayList<>();
+    private ArrayList<String> pilihan = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +62,7 @@ public class KuisDestinasiActivity extends AppCompatActivity {
                 pilihan.add(mButtonChoice2.getText().toString());
                 updateQuestion();
             } else {
-                pilihan.add(mButtonChoice1.getText().toString());
+                pilihan.add(mButtonChoice2.getText().toString());
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 intent.putStringArrayListExtra("pilihan", pilihan);
                 startActivity(intent);
@@ -69,7 +74,7 @@ public class KuisDestinasiActivity extends AppCompatActivity {
                 pilihan.add(mButtonChoice3.getText().toString());
                 updateQuestion();
             } else {
-                pilihan.add(mButtonChoice1.getText().toString());
+                pilihan.add(mButtonChoice3.getText().toString());
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 intent.putStringArrayListExtra("pilihan", pilihan);
                 startActivity(intent);
@@ -85,7 +90,7 @@ public class KuisDestinasiActivity extends AppCompatActivity {
 
         Glide.with(this).asBitmap()
                 .load(mQuestionLibrary.getImage(mQuestionNumber))
-                .override(400, 200)
+                .override(300, 150)
                 .into(imgIlustrasiKuis);
 
         mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
