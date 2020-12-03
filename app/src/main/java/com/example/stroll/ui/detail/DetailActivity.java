@@ -1,7 +1,5 @@
 package com.example.stroll.ui.detail;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -9,10 +7,8 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.example.stroll.R;
-import com.example.stroll.database.DatabaseContract;
-import com.example.stroll.database.DatabaseHelper;
 import com.example.stroll.database.DestinasiHelper;
 import com.example.stroll.helper.MappingHelper;
 import com.example.stroll.model.Destinasi;
@@ -73,7 +69,6 @@ public class DetailActivity extends AppCompatActivity {
                     Toast.makeText(this, "Berhasil hapus Favorite", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "Gagal hapus favorite", Toast.LENGTH_SHORT).show();
-
                 }
             } else {
                 isFavorite = true;
@@ -105,7 +100,6 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-
     private void changeView(Destinasi destinasi) {
 
         Picasso.get()
@@ -115,7 +109,6 @@ public class DetailActivity extends AppCompatActivity {
         txtNamaDestinasiDetail.setText(destinasi.getNamaDestinasi());
         txtDeskripsiDestinasiDetail.setText(destinasi.getDeskripsiDestinasi());
         txtAlamatDestinasiDetail.setText(destinasi.getAlamatDestinasi());
-
     }
 
     private void initView() {

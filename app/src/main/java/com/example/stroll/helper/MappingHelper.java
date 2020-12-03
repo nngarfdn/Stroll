@@ -1,13 +1,9 @@
 package com.example.stroll.helper;
 
 import android.database.Cursor;
-import com.example.stroll.database.DatabaseContract;
+
 import com.example.stroll.model.Destinasi;
-
 import java.util.ArrayList;
-
-import static android.provider.BaseColumns._ID;
-
 public class MappingHelper {
 
     static String TITLE = "title";

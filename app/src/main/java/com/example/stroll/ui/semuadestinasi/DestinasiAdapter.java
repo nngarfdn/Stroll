@@ -1,8 +1,6 @@
 package com.example.stroll.ui.semuadestinasi;
 
 import android.content.Intent;
-import android.media.Image;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.stroll.R;
@@ -22,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DestinasiAdapter extends RecyclerView.Adapter<DestinasiAdapter.ViewHolder> {
-    private List<Destinasi> listCourses = new ArrayList<>();
+    private final List<Destinasi> listCourses = new ArrayList<>();
 
     public void setCourses(List<Destinasi> listCourses) {
         if (listCourses == null) return;
@@ -48,7 +45,7 @@ public class DestinasiAdapter extends RecyclerView.Adapter<DestinasiAdapter.View
         return listCourses.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView tvTitle;
         final TextView tvDeskripsi;
         TextView tvAlamat;

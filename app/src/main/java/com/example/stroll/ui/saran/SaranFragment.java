@@ -2,24 +2,22 @@ package com.example.stroll.ui.saran;
 
 import android.content.Intent;
 import android.os.Bundle;
-import java.util.Collections;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.stroll.R;
 import com.example.stroll.model.Destinasi;
 import com.example.stroll.ui.favorite.FavoriteActivity;
 import com.example.stroll.ui.home.HomeActivity;
 import com.example.stroll.ui.semuadestinasi.DestinasiAdapter;
-import com.example.stroll.ui.semuadestinasi.SemuaDestinasiFragment;
 import com.example.stroll.utils.DataBioskop;
 import com.example.stroll.utils.DataCandi;
 import com.example.stroll.utils.DataInternetCafe;
@@ -29,12 +27,10 @@ import com.example.stroll.utils.DataMuseum;
 import com.example.stroll.utils.DataPantai;
 import com.example.stroll.utils.DataPublicPlaces;
 import com.example.stroll.utils.DataRestoran;
-import com.google.android.material.chip.Chip;
-import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
 
 public class SaranFragment extends Fragment {
 
@@ -52,9 +48,6 @@ public class SaranFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
-
         return inflater.inflate(R.layout.fragment_saran, container, false);
     }
 
@@ -102,9 +95,7 @@ public class SaranFragment extends Fragment {
                 }
             }
         }
-
         Collections.shuffle(list);
-
         Log.d("SaranFragment", "Data pilihan: " + pilihan);
         for (int i = 0; i < list.size(); i++) {
             Log.d("SaranFragment", "Data saran : " +
@@ -118,8 +109,5 @@ public class SaranFragment extends Fragment {
         DestinasiAdapter listPlayerAdapter = new DestinasiAdapter();
         listPlayerAdapter.setCourses(list);
         rvSemuaDestinasi.setAdapter(listPlayerAdapter);
-    }
-    private void showRecyclerList() {
-
     }
 }

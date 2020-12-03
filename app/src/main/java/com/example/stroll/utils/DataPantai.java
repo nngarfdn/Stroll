@@ -6,15 +6,15 @@ import java.util.ArrayList;
 
 public class DataPantai {
 
-    private static int[] id = {
-            01,
-            02,
-            03,
-            04,
-            05
+    private static final int[] id = {
+            1,
+            2,
+            3,
+            4,
+            5
     };
 
-    private static String[] photoPantai = {
+    private static final String[] photoPantai = {
             "https://www.1001malam.com/travel/wp-content/uploads/2016/09/Sumber-zonalibur.jpg",
             "https://www.alodiatour.com/wp-content/uploads/2018/01/wisata-pantai-kuwaru.jpg",
             "https://www.pantainesia.com/wp-content/uploads/2018/03/Pantai-Baru-1248x703.jpg",
@@ -22,7 +22,7 @@ public class DataPantai {
             "https://piknikasik.com/wp-content/uploads/2016/07/pantai-timang-gunungkidul-jogja1.jpg"
     };
 
-    private static String[] namaPantai = {
+    private static final String[] namaPantai = {
             "Pantai Parangtritis",
             "Pantai Kuwaru",
             "Pantai Baru",
@@ -30,7 +30,7 @@ public class DataPantai {
             "Pantai Timang"
     };
 
-    private static String[] deskripsiPantai = {
+    private static final String[] deskripsiPantai = {
             "Pantai Parangtritis adalah pantai yang paling populer yang terletak di Desa Parangtritis, Kecamatan Kretek, Kabupaten Bantul Yogyakarta",
             "Pantai Kuwaru merupakan sebuah pantai yang di sekitarnya tumbuh banyak pohon cemara yang cukup rindang",
             "Pantai Baru merupakan salah satu pantai di Jogja yang masih perawan sehingga relatif bersih, nyaman, dan terbebas dari polusi udara",
@@ -38,16 +38,13 @@ public class DataPantai {
             "Pantai Timang Yogyakarta menawarkan aktvitas wisata yang menantang tidak seperti kebanyakan pantai"
     };
 
-    private static String[] alamatPantai = {
+    private static final String[] alamatPantai = {
             "Jl. Parangtritis Km. 28 Parangtritis Yogyakarta 55188",
             "Dusun Poncosari, Srandakan, Kab. Bantul, Yogyakarta 55762",
             "Ngentak, Poncosari, Srandakan, Bantul, daerah Istimewa Yogyakarta",
             "Dusun Temon, Desa Giripurwo. Kecamatan Purwosari, Kabupaten Gunungkidul, DI Yogyakarta",
             "Padukuhan Danggolo, Desa Purwodadi, Kecamatan Tepus, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta"
     };
-
-
-
 
     public static ArrayList<Destinasi> getListDataPantai() {
         ArrayList<Destinasi> list = new ArrayList<>();

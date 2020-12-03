@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class DataInternetCafe {
 
-    private static int[] id = {
+    private static final int[] id = {
             31,
             32,
             33,
@@ -14,7 +14,7 @@ public class DataInternetCafe {
             35
     };
 
-    private static String[] photoInternetCafe = {
+    private static final String[] photoInternetCafe = {
             "https://cdn-2.tstatic.net/jogja/foto/bank/images/superhotspot-net-city-internet-learning-cafe_20180117_205405.jpg",
             "https://xplorejogjayuk.files.wordpress.com/2018/09/luxury-jogja.jpg",
             "https://www.sobatjogja.com/wp-content/uploads/2015/05/JagoNet-Jogja-Internet-Center-Warnet-di-Jogja-Yang-Istimewa.jpg",
@@ -22,7 +22,7 @@ public class DataInternetCafe {
             "https://gamebrott.com/wp-content/uploads/2019/10/46065158_553787905095438_556053404042606532_n.jpg"
     };
 
-    private static String[] namaInternetCafe = {
+    private static final String[] namaInternetCafe = {
             "NetCity",
             "Luxury",
             "Jago Net",
@@ -30,7 +30,7 @@ public class DataInternetCafe {
             "Skyland"
     };
 
-    private static String[] deskripsiInternetCafe = {
+    private static final String[] deskripsiInternetCafe = {
             "Netcity adalah warnet terbesar di Yogyakarta",
             "Cafe 24 jam ini adalah perpaduan antara cafe dengan warnet",
             "Jago Net merupakan salah satu dari beberapa warnet yang mengusung model bisnis warnet eksklusif",
@@ -38,7 +38,7 @@ public class DataInternetCafe {
             "Warnet gaming yang memiliki PC dengan spesifikasi High-End"
     };
 
-    private static String[] alamatInternetCafe = {
+    private static final String[] alamatInternetCafe = {
             "Jl. Ipda Tut Harsono, Muja Muju, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55165",
             "Caturtunggal, Kecamatan Depok, Karang Wuni, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55284",
             "Jl. Ngapak - Kentheng No.16, Kwarasan, Nogotirto, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55592",

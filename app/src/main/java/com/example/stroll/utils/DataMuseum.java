@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class DataMuseum {
 
-    private static int[] id = {
+    private static final int[] id = {
             11,
             12,
             13,
@@ -14,7 +14,7 @@ public class DataMuseum {
             15
     };
 
-    private static String[] photoMuseum = {
+    private static final String[] photoMuseum = {
             "https://myeatandtravelstory.files.wordpress.com/2015/12/dscf8737-800x533.jpg",
             "https://paketwisata.id/wp-content/uploads/2018/10/benteng-vredeburg-yogyakarta.jpg",
             "https://raskitatrans.com/wp-content/uploads/2019/09/Museum-Dirgantara-TNI-AU.jpg",
@@ -22,7 +22,7 @@ public class DataMuseum {
             "https://www.alodiatour.com/wp-content/uploads/2018/11/museum-affandi.jpg"
     };
 
-    private static String[] namaMuseum = {
+    private static final String[] namaMuseum = {
             "Museum Sonobudoyo Yogyakarta",
             "Museum Benteng Vredeburg",
             "Museum Dirgantara Mandala",
@@ -30,7 +30,7 @@ public class DataMuseum {
             "Museum Affandi"
     };
 
-    private static String[] deskripsiMuseum = {
+    private static final String[] deskripsiMuseum = {
             "Sonobudoyo merupakan museum yang berisi sejarah dan kebudayaan Jawa",
             "Benteng Vredeburg merupakan salah satu museum peninggalan Belanda yang sangat terkenal di Jogja",
             "Dirgantara Mandala adalah museum yang digagas oleh TNI AU untuk mengabadikan peristiwa bersejarah dalam lingkungan TNI AU",
@@ -38,7 +38,7 @@ public class DataMuseum {
             "Museum Affandi merupakan sebuah museum yang memiliki berbagai koleksi lukisan dari para maestro seni lukis Indonesia khususnya Affandi"
     };
 
-    private static String[] alamatMuseum = {
+    private static final String[] alamatMuseum = {
             "Jl. Pangurakan No.6, Ngupasan, Gondomanan, Yogyakarta, DI Yogyakarta, Indonesia 55122",
             "Jalan Margo Mulyo No. 6 Yogyakarta 55121",
             "Komplek Pangkalan TNI AU Lanud Adisutjipto, Yogyakarta",

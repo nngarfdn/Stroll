@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class DataMall {
 
-    private static int[] id = {
+    private static final int[] id = {
             61,
             62,
             63,
@@ -14,7 +14,7 @@ public class DataMall {
             65
     };
 
-    private static String[] photoMall = {
+    private static final String[] photoMall = {
             "https://lh5.googleusercontent.com/_NRz4H9l73hQ/TYuXtlwfB2I/AAAAAAAAFJ0/msPObx4n4-A/s900/IMG_2448.JPG",
             "https://jejakpiknik.com/wp-content/uploads/2018/10/mall-di-jogja.jpg",
             "https://eci.id/documents/store/Jogja%20City%20Mall/best/Jogja%20City%20Mall1.jpg",
@@ -22,7 +22,7 @@ public class DataMall {
             "https://www.jogjasuper.co.id/wp-content/uploads/2018/02/lippo-plaza-jogja.jpg"
     };
 
-    private static String[] namaMall = {
+    private static final String[] namaMall = {
             "Mal Malioboro",
             "Plaza Ambarrukmo",
             "Jogja City Mall",
@@ -30,7 +30,7 @@ public class DataMall {
             "Lippo Plaza Jogja"
     };
 
-    private static String[] deskripsiMall = {
+    private static final String[] deskripsiMall = {
             "Mal Malioboro adalah sebuah mal yang terletak di pusat kota Yogyakarta",
             "Plaza Ambarrukmo adalah pusat perbelanjaan keluarga di Yogyakarta dengan perpaduan konsep arsitektur Jawa klasik dan desain interior modern yang mewah",
             "Jogja City Mall atau biasa disingkat JCM merupakan sebuah pusat perbelanjaan yang berada dalam satu kawasan dengan The Sahid Rich Hotel Yogyakarta dengan arsitektur Romawi",
@@ -38,7 +38,7 @@ public class DataMall {
             "Lippo Plaza Jogja merupakan sebuah plaza yang dibangun di bekas lahan Mall Saphir Square, yang berada di wilayah Demangan"
     };
 
-    private static String[] alamatMall = {
+    private static final String[] alamatMall = {
             "Jl. Malioboro No.52-58, Suryatmajan, Kec. Danurejan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55213",
             "Jl. Laksda Adisucipto No.3, Ambarukmo, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
             "Jl. Magelang Km. 06 No.18 Sinduadi, Sleman Yogyakarta",

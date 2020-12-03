@@ -12,18 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
-import android.widget.Toast;
 
 
 import com.example.stroll.R;
 import com.example.stroll.model.Destinasi;
-import com.example.stroll.model.Kategori;
 import com.example.stroll.ui.favorite.FavoriteActivity;
 import com.example.stroll.utils.DataBioskop;
 import com.example.stroll.utils.DataCandi;
 import com.example.stroll.utils.DataInternetCafe;
-import com.example.stroll.utils.DataKategori;
 import com.example.stroll.utils.DataKolamRenang;
 import com.example.stroll.utils.DataMall;
 import com.example.stroll.utils.DataMuseum;
@@ -43,23 +39,15 @@ public class SemuaDestinasiFragment extends Fragment {
     FloatingActionButton fab;
     Chip cPantai, cBioskop, cCandi, cInternetCafe, cKolamRenang, cMall, cMuseum, cPublicPlaces, cRestoran;
     ChipGroup chipGroup;
-    private ArrayList<Destinasi> list = new ArrayList<>();
+    private final ArrayList<Destinasi> list = new ArrayList<>();
 
     public SemuaDestinasiFragment() {
-        // Required empty public constructor
-    }
 
-    public static SemuaDestinasiFragment newInstance(String param1, String param2) {
-        SemuaDestinasiFragment fragment = new SemuaDestinasiFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -149,8 +137,7 @@ public class SemuaDestinasiFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=  inflater.inflate(R.layout.fragment_semua_destinasi, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_semua_destinasi, container, false);
 
     }
 
