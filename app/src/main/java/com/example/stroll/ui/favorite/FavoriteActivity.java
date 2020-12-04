@@ -18,6 +18,11 @@ import java.util.ArrayList;
 public class FavoriteActivity extends AppCompatActivity {
 
     private RecyclerView rvFavorite;
+    ImageView imgKosong;
+    Cursor dataCursor;
+    DestinasiHelper destinasiHelper;
+    ArrayList<Destinasi> listDestinasi;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,16 +30,27 @@ public class FavoriteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_favorite);
 
         rvFavorite = findViewById(R.id.rvfavorite);
-        ImageView imgKosong = findViewById(R.id.imgKosong);
-        DestinasiHelper destinasiHelper = DestinasiHelper.getInstance(this);
+        imgKosong = findViewById(R.id.imgKosong);
+        destinasiHelper = DestinasiHelper.getInstance(this);
+
+        loadData();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadData();
+    }
+
+
+    private void loadData() {
         destinasiHelper.open();
-
-        Cursor dataCursor = destinasiHelper.queryAll();
-        ArrayList<Destinasi> listDestinasi = MappingHelper.mapCursorToArrayList(dataCursor);
-
-        if (listDestinasi.isEmpty()){
+        dataCursor = destinasiHelper.queryAll();
+        listDestinasi = MappingHelper.mapCursorToArrayList(dataCursor);
+        if (listDestinasi.isEmpty()) {
             imgKosong.setVisibility(View.VISIBLE);
-        }else {
+            showRecyclerList(listDestinasi);
+        } else {
             imgKosong.setVisibility(View.INVISIBLE);
             showRecyclerList(listDestinasi);
         }
